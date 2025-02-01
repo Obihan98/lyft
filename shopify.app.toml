@@ -1,0 +1,37 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "1f46c9f910535852e41e17648c72a472"
+application_url = "https://thee-uv-norfolk-mills.trycloudflare.com"
+embedded = true
+name = "lift"
+handle = "lift-1"
+
+[webhooks]
+api_version = "2025-01"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_discounts"
+
+[auth]
+redirect_urls = [
+  "https://thee-uv-norfolk-mills.trycloudflare.com/auth/callback",
+  "https://thee-uv-norfolk-mills.trycloudflare.com/auth/shopify/callback",
+  "https://thee-uv-norfolk-mills.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "orhans-test-store.myshopify.com"
+automatically_update_urls_on_dev = true
+include_config_on_deploy = true

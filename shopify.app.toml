@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "1f46c9f910535852e41e17648c72a472"
-application_url = "https://thee-uv-norfolk-mills.trycloudflare.com"
+application_url = "https://interaction-mills-caroline-duration.trycloudflare.com"
 embedded = true
 name = "lift"
 handle = "lift-1"
@@ -19,13 +19,13 @@ api_version = "2025-01"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = "write_discounts"
+scopes = "read_locations,read_products"
 
 [auth]
 redirect_urls = [
-  "https://thee-uv-norfolk-mills.trycloudflare.com/auth/callback",
-  "https://thee-uv-norfolk-mills.trycloudflare.com/auth/shopify/callback",
-  "https://thee-uv-norfolk-mills.trycloudflare.com/api/auth/callback"
+  "https://interaction-mills-caroline-duration.trycloudflare.com/auth/callback",
+  "https://interaction-mills-caroline-duration.trycloudflare.com/auth/shopify/callback",
+  "https://interaction-mills-caroline-duration.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

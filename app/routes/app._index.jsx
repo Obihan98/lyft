@@ -1,5 +1,5 @@
 import WelcomeCard from "../components/Index/WelcomeCard";
-import NewDiscountModal from "../components/Index/NewDiscountModal";
+import EmptySplitRules from "../components/Index/EmptySplitRules";
 
 import { authenticate } from "../shopify.server";
 
@@ -30,25 +30,21 @@ export default function Index() {
     <div>
       <Page
         title="Lyft"
-        primaryAction={{content: 'Create a discount', onAction: () => setNewDiscountModalActive(true)}}
+        primaryAction={{content: 'Create split rule', url: '/app/splitrules/new'}}
         narrowWidth={true}
       >
         <Layout>
           <Layout.Section>
-            <WelcomeCard setNewDiscountModalActive={setNewDiscountModalActive}/>
+            <WelcomeCard/>
           </Layout.Section>
           <Layout.Section>
+            <EmptySplitRules/>
           </Layout.Section>
           <Layout.Section>
           </Layout.Section>
         <Layout.Section></Layout.Section>
         </Layout>
       </Page>
-      {
-        newDiscountModalActive
-        ? <NewDiscountModal newDiscountModalActive={newDiscountModalActive} setNewDiscountModalActive={setNewDiscountModalActive}/>
-        : null
-      }
     </div>
   );
 }

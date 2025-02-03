@@ -5,7 +5,7 @@ node_modules
 /app/build
 /public/build/
 /public/_dev
-/app/public/build
+/app/certificates
 /prisma/dev.sqlite
 /prisma/dev.sqlite-journal
 database.sqlite

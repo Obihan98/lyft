@@ -10,18 +10,18 @@ import {
 
 import { useState } from "react";
 
-function Description({header, discount, setDiscount, errors, setErrors}) {
+function Description({header, split, setSplit, errors, setErrors}) {
 
   return (
     <Card>
-      <BlockStack gap={200}>
+      <BlockStack gap={500}>
         <Text as="p" fontWeight="medium">
           {header}
         </Text>
         <TextField
           label="Title"
-          value={discount.title}
-          onChange={(value) => {setErrors({...errors, title:""}); shopify.saveBar.show('discount-save-bar'); setDiscount({...discount, title: value})}}
+          value={split.title}
+          onChange={(value) => {setErrors({...errors, title:""}); shopify.saveBar.show('split-save-bar'); setSplit({...split, title: value})}}
           showCharacterCount
           error={errors.title}
         />

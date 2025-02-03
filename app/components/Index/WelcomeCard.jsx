@@ -7,14 +7,14 @@ function WelcomeCard(props) {
 
   return (
     <CalloutCard
-      title="Get discounts applied at checkout on a customer's first order."
-      illustration="https://cdn.shopify.com/shopifycloud/web/assets/v1/vite/client/en/assets/empty-state-discount-IqX-GiQmgbHG.svg"
+      title="Automatically split orders based on custom rules"
+      illustration="https://cdn.shopify.com/shopifycloud/web/assets/v1/vite/client/en/assets/empty-state-finances-CwlxKNKOUfAf.svg"
       primaryAction={{
-        content: 'Create a discount',
-        onAction: () => setNewDiscountModalActive(true)
+        content: 'Create split rule',
+        url: '/app/splitrules/new'
       }}
     >
-      <p>Apply discounts at checkout for first-time customers by verifying unused phone numbers or email addresses.</p>
+      <p>Easily split orders into parent and child orders to streamline fulfillment, improve order management, and automate processing.</p>
     </CalloutCard>
   );
 }
